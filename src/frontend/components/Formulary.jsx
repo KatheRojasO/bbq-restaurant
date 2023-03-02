@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-export default function Formulary() {
+export default function Formulary({onCreateItem}) {
   const [name, setName] = useState("");
   const [description, setDescription] = useState("");
   const [servedWith, setServedWith] = useState("");
@@ -13,6 +13,17 @@ export default function Formulary() {
   function onSubmit(event) {
     event.preventDefault();
     console.log("item","name:" + name, "descr:" + description, "pice:" + price, "served:" + servedWith, "img:" +imageURL, "cate:" + category);
+
+    const data = {
+        name:name,
+        description: description,
+        price: price,
+        servedWith: servedWith,
+        image: imageURL,
+        category: category,
+    };
+
+    onCreateItem(data)
   }
 
   return (
