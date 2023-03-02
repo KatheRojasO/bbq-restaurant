@@ -11,7 +11,7 @@ export default function App() {
       const data = await readDocuments(collectionName).catch(onFail);
       onSuccess(data);
     }
-    loadData("pork");
+    loadData("menuItems");
   }, []);
 
   function onSuccess(data) {
