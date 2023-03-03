@@ -18,7 +18,8 @@ export default function ItemMenu({ item, onDeleteItem }) {
           <li>{price}:-</li>
           <li>{description}</li>
           <li>{servedWith}</li>
-          
+          <button onClick={() => setIsOpen(true)}>Modify</button>
+          <Modal open={isOpen} onClose={() => setIsOpen(false)}>Fancy Modal</Modal>
           <button onClick={() => onDeleteItem(id)}>Delete</button>
         </ul>
       </article>
