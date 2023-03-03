@@ -12,7 +12,6 @@ export default function Formulary({onCreateItem}) {
 
   function onSubmit(event) {
     event.preventDefault();
-    console.log("item","name:" + name, "descr:" + description, "pice:" + price, "served:" + servedWith, "img:" +imageURL, "cate:" + category);
 
     const data = {
         name:name,

@@ -1,11 +1,11 @@
-import { collection, getDocs, addDoc } from "firebase/firestore"; //Read data
+import { collection, doc } from "firebase/firestore";
+import { getDocs, addDoc, deleteDoc } from "firebase/firestore";
 import { database } from "./firebaseSetup";
 
 export async function createDocument(collectionName, data) {
   const reference = collection(database, collectionName);
   const document = await addDoc(reference, data);
   const result = document.id;
-  console.log("document was created with document:", document.id);
   return result;
 }
 
@@ -19,3 +19,12 @@ export async function readDocuments(collectionName) {
 
   return result;
 }
+
+export async function deleteDocument(collectionName, id) {
+  const reference = doc(database, collectionName, id);
+  await deleteDoc(reference)
+  return id;
+}
+
+
+

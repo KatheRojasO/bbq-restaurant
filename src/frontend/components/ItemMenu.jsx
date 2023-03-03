@@ -1,8 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
+import Modal from "./Modal";
 
-export default function ItemMenu({ item }) {
+export default function ItemMenu({ item, onDeleteItem }) {
 
-    const { name, image, alt, price, description, servedWith } = item;
+    const { id, name, image, alt, price, description, servedWith } = item;
+
+    const [isOpen, setIsOpen] = useState(false);
+    
   return (
     <div>
       <article>
@@ -14,6 +18,8 @@ export default function ItemMenu({ item }) {
           <li>{price}:-</li>
           <li>{description}</li>
           <li>{servedWith}</li>
+          
+          <button onClick={() => onDeleteItem(id)}>Delete</button>
         </ul>
       </article>
     </div>
