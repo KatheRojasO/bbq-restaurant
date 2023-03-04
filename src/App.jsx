@@ -25,9 +25,8 @@ export default function App() {
   return (
     <div>
       <h1>Admin interface</h1>
-
       {status === 0 && <p>Loading...⏱️</p>}
-      {status === 1 && <MenuPage state={[menuItems, setMenuItems]} />}
+      {status === 1 && <MenuPage state={[menuItems, setMenuItems]}/>}
       {status === 2 && <p>Error...❌</p>}
     </div>
   );

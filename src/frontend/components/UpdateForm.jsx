@@ -1,33 +1,32 @@
 import React, { useState } from "react";
 
-export default function Formulary({onCreateItem}) {
-  const [name, setName] = useState("");
-  const [description, setDescription] = useState("");
-  const [servedWith, setServedWith] = useState("");
-  const [price, setPrice] = useState("");
-  const [imageURL, setImageURL] = useState(""); 
-  const [category, setCategory] = useState("");
-
-  
+export default function UpdateForm({ onUpdateItem, item }) {
+  const { id } = item;
+  const [name, setName] = useState(item.name);
+  const [description, setDescription] = useState(item.description);
+  const [servedWith, setServedWith] = useState(item.servedWith);
+  const [price, setPrice] = useState(item.price);
+  const [imageURL, setImageURL] = useState(item.imageURL);
+  const [category, setCategory] = useState(item.category);
 
   function onSubmit(event) {
     event.preventDefault();
 
-    const data = {
-        name:name,
-        description: description,
-        price: price,
-        servedWith: servedWith,
-        image: imageURL,
-        category: category,
+    const itemObject = {
+      id: id,
+      name: name,
+      description: description,
+      price: price,
+      servedWith: servedWith,
+      image: imageURL,
+      category: category,
     };
-
-    onCreateItem(data)
+    onUpdateItem(itemObject);
   }
 
   return (
     <form onSubmit={(event) => onSubmit(event)}>
-      <h3>Add a new plate to Hot Grill page:</h3>
+      <h3>Update info:</h3>
       <label>
         Product name:
         <input
@@ -77,8 +76,7 @@ export default function Formulary({onCreateItem}) {
           onChange={(event) => setCategory(event.target.value)}
         />
       </label>
-      
-      <button>Add item</button>
+      <button>Update item</button>
     </form>
   );
 }

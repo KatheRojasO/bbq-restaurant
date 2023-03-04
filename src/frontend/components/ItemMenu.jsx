@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Modal from "./Modal";
 
-export default function ItemMenu({ item, onDeleteItem }) {
+export default function ItemMenu({ item, onUpdateItem ,onDeleteItem }) {
 
     const { id, name, image, alt, price, description, servedWith } = item;
 
@@ -19,7 +19,7 @@ export default function ItemMenu({ item, onDeleteItem }) {
           <li>{description}</li>
           <li>{servedWith}</li>
           <button onClick={() => setIsOpen(true)}>Modify</button>
-          <Modal open={isOpen} onClose={() => setIsOpen(false)}>Fancy Modal</Modal>
+          <Modal open={isOpen} onClose={() => setIsOpen(false)} item={item} onUpdateItem={onUpdateItem}>Fancy Modal</Modal>
           <button onClick={() => onDeleteItem(id)}>Delete</button>
         </ul>
       </article>

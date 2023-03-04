@@ -1,5 +1,5 @@
 import { collection, doc } from "firebase/firestore";
-import { getDocs, addDoc, deleteDoc } from "firebase/firestore";
+import { getDocs, addDoc, updateDoc, deleteDoc } from "firebase/firestore";
 import { database } from "./firebaseSetup";
 
 export async function createDocument(collectionName, data) {
@@ -18,6 +18,13 @@ export async function readDocuments(collectionName) {
   });
 
   return result;
+}
+
+export async function updateDocument(collectionName, documentToUpdate) {
+  const id = documentToUpdate.id;
+  const reference = doc(database, collectionName, id);
+  await updateDoc(reference, documentToUpdate)
+  return id;
 }
 
 export async function deleteDocument(collectionName, id) {

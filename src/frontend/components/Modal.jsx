@@ -1,10 +1,13 @@
 import React from "react";
 import ReactDom from "react-dom";
 import "../styles/Modal.css";
-import Formulary from "./Formulary";
+import UpdateForm from "./UpdateForm";
 
-export default function Modal({ open, children, onClose }) {
+export default function Modal({ open, children, onClose, onUpdateItem, item}) {
+
   if (!open) return null;
+
+  
 
   return ReactDom.createPortal(
     <>
@@ -12,7 +15,7 @@ export default function Modal({ open, children, onClose }) {
         <div className="modal-style">
           <button onClick={onClose}> Close modal</button>
           {children}
-          <Formulary/>
+          <UpdateForm onUpdateItem= {onUpdateItem} item={item}/>
         </div>
       </div>
     </>,
