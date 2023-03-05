@@ -1,0 +1,32 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Didact+Gothic&family=Special+Elite&display=swap");
+
+h1 {
+  font-family: "Special Elite", cursive;
+  font-size: 36px;
+  margin: var(--space-small);
+}
+
+h2 {
+  font-family: "Bebas Neue", cursive;
+  font-size: 20px;
+  margin: var(--space-small);
+}
+
+h3 {
+  font-family: "Didact Gothic", sans-serif;
+  font-size: 20px;
+  margin: var(--space-small);
+  color: var(--bbq-white);
+} 
+
+button {
+  font-family: "Bebas Neue", cursive;
+  color: var(--bbq-white);
+  font-size: 20px;
+}
+
+p, 
+label {
+  font-family: "Didact Gothic", sans-serif;
+  font-size: 16px;
+}

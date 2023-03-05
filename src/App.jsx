@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
+import "./frontend/styles/styles.css"
 import { readDocuments } from "./backend/scripts/firestore";
-import MenuPage from "./frontend/pages/MenuPage";
+import AdminPage from "./frontend/pages/AdminPage";
 
 export default function App() {
   const [menuItems, setMenuItems] = useState([]);
@@ -24,9 +25,8 @@ export default function App() {
 
   return (
     <div>
-      <h1>Admin interface</h1>
       {status === 0 && <p>Loading...⏱️</p>}
-      {status === 1 && <MenuPage state={[menuItems, setMenuItems]}/>}
+      {status === 1 && <AdminPage state={[menuItems, setMenuItems]}/>}
       {status === 2 && <p>Error...❌</p>}
     </div>
   );

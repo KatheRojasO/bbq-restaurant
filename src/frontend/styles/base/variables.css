@@ -1,0 +1,13 @@
+/* Colors */
+:root {
+    --bbq-red: #9B1F27;
+    --bbq-black: #131B1D;
+    --bbq-white: #FFFFFF;
+  }
+  
+  /* Space */
+  :root {
+    --space-small: 8px;
+    --space-medium: 16px;
+    --space-big: 32px;
+  }

@@ -1,0 +1,20 @@
+html {
+  background: url("../../assets/images/background.jpg");
+  font-family: "Noto Serif", serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+    background-color: var(--bbq-red);
+    margin: 0 auto;
+    padding: var(--space-medium);
+    max-width: 960px;
+}
+
+ul {
+    margin: 0;
+}
