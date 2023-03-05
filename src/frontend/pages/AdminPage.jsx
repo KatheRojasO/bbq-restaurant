@@ -4,8 +4,10 @@ import {
   deleteDocument,
   updateDocument,
 } from "../../backend/scripts/firestore";
+import img from "../assets/images/logo.png";
 import AddForm from "../components/AddForm";
 import ItemMenu from "../components/ItemMenu";
+
 
 export default function MenuPage({ state }) {
   const [menuItems, setMenuItems] = state;
@@ -18,7 +20,6 @@ export default function MenuPage({ state }) {
         onUpdateItem={onUpdateItem}
         onDeleteItem={onDeleteItem}
       />
-      <hr />
     </>
   ));
 
@@ -32,10 +33,12 @@ export default function MenuPage({ state }) {
 
   async function onUpdateItem(itemObject) {
     const clonedMenuItems = [...menuItems];
-    const itemIndex = clonedMenuItems.findIndex((item) => item.id === itemObject.id);
+    const itemIndex = clonedMenuItems.findIndex(
+      (item) => item.id === itemObject.id
+    );
     await updateDocument("menuItems", itemObject);
     clonedMenuItems[itemIndex] = itemObject;
-    setMenuItems(clonedMenuItems)
+    setMenuItems(clonedMenuItems);
   }
 
   async function onDeleteItem(id) {
@@ -47,10 +50,16 @@ export default function MenuPage({ state }) {
   }
 
   return (
-    <div>
-      <h2> Products Created: </h2>
-      <AddForm onCreateItem={onCreateItem}/>
-      {Items}
+    <div className="admin-page">
+      <div className="container">
+        <div className="dashboard-header">
+          <img src={img} alt="logo"></img>
+          <h1>Hot Grill Dashboard</h1>
+        </div>
+        <h2> Welcome, admin! </h2>
+        <AddForm onCreateItem={onCreateItem} />
+        {Items}
+      </div>
     </div>
   );
 }

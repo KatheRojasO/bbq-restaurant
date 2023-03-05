@@ -1,39 +1,39 @@
 import React, { useState } from "react";
 
-export default function AddForm({onCreateItem}) {
+export default function AddForm({ onCreateItem }) {
   const [name, setName] = useState("");
   const [description, setDescription] = useState("");
   const [servedWith, setServedWith] = useState("");
   const [price, setPrice] = useState("");
-  const [imageURL, setImageURL] = useState(""); 
+  const [imageURL, setImageURL] = useState("");
   const [category, setCategory] = useState("");
 
   function onSubmit(event) {
     event.preventDefault();
 
     const itemObject = {
-        name:name,
-        description: description,
-        price: price,
-        servedWith: servedWith,
-        image: imageURL,
-        category: category,
+      name: name,
+      description: description,
+      price: price,
+      servedWith: servedWith,
+      image: imageURL,
+      category: category,
     };
-    onCreateItem(itemObject)
+    onCreateItem(itemObject);
   }
 
   return (
-    <form onSubmit={(event) => onSubmit(event)}>
+    <form className="add-form" onSubmit={(event) => onSubmit(event)}>
       <h3>Add a new plate to Hot Grill page:</h3>
-      <label>
-        Product name:
-        <input
-          type="text"
-          value={name}
-          onChange={(event) => setName(event.target.value)}
-        />
-      </label>
-      <label>
+        <label className="add-form-label">
+          Product name:
+          <input
+            type="text"
+            value={name}
+            onChange={(event) => setName(event.target.value)}
+          />
+        </label>
+      <label className="add-form-label">
         Product description:
         <input
           type="text"
@@ -41,7 +41,7 @@ export default function AddForm({onCreateItem}) {
           onChange={(event) => setDescription(event.target.value)}
         />
       </label>
-      <label>
+      <label className="add-form-label">
         Served with:
         <input
           type="text"
@@ -49,7 +49,7 @@ export default function AddForm({onCreateItem}) {
           onChange={(event) => setServedWith(event.target.value)}
         />
       </label>
-      <label>
+      <label className="add-form-label">
         Price:
         <input
           type="number"
@@ -58,7 +58,7 @@ export default function AddForm({onCreateItem}) {
           onChange={(event) => setPrice(event.target.value)}
         />
       </label>
-      <label>
+      <label className="add-form-label">
         Image link:
         <input
           type="text"
@@ -66,7 +66,7 @@ export default function AddForm({onCreateItem}) {
           onChange={(event) => setImageURL(event.target.value)}
         />
       </label>
-      <label>
+      <label className="add-form-label">
         Category:
         <input
           type="text"

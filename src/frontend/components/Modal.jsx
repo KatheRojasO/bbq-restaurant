@@ -1,6 +1,5 @@
 import React from "react";
 import ReactDom from "react-dom";
-import "../styles/Modal.css";
 import UpdateForm from "./UpdateForm";
 
 export default function Modal({ open, children, onClose, onUpdateItem, item}) {
