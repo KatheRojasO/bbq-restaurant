@@ -8,7 +8,6 @@ import img from "../assets/images/logo.png";
 import AddForm from "../components/AddForm";
 import ItemMenu from "../components/ItemMenu";
 
-
 export default function MenuPage({ state }) {
   const [menuItems, setMenuItems] = state;
 
@@ -20,6 +19,7 @@ export default function MenuPage({ state }) {
         onUpdateItem={onUpdateItem}
         onDeleteItem={onDeleteItem}
       />
+      <hr />
     </>
   ));
 
@@ -56,7 +56,7 @@ export default function MenuPage({ state }) {
           <img src={img} alt="logo"></img>
           <h1>Hot Grill Dashboard</h1>
         </div>
-        <h2> Welcome, admin! </h2>
+        <h2>Welcome, admin!</h2>
         <AddForm onCreateItem={onCreateItem} />
         {Items}
       </div>

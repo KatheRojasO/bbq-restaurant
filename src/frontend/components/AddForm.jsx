@@ -25,14 +25,14 @@ export default function AddForm({ onCreateItem }) {
   return (
     <form className="add-form" onSubmit={(event) => onSubmit(event)}>
       <h3>Add a new plate to Hot Grill page:</h3>
-        <label className="add-form-label">
-          Product name:
-          <input
-            type="text"
-            value={name}
-            onChange={(event) => setName(event.target.value)}
-          />
-        </label>
+      <label className="add-form-label">
+        Product name:
+        <input
+          type="text"
+          value={name}
+          onChange={(event) => setName(event.target.value)}
+        />
+      </label>
       <label className="add-form-label">
         Product description:
         <input
@@ -74,7 +74,7 @@ export default function AddForm({ onCreateItem }) {
           onChange={(event) => setCategory(event.target.value)}
         />
       </label>
-      <button>Add item</button>
+      <button className="add-button">Add item</button>
     </form>
   );
 }

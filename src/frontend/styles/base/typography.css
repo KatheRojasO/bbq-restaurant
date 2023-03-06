@@ -17,7 +17,7 @@ h3 {
   font-size: 20px;
   margin: var(--space-small);
   color: var(--bbq-white);
-} 
+}
 
 button {
   font-family: "Bebas Neue", cursive;
@@ -25,8 +25,24 @@ button {
   font-size: 20px;
 }
 
-p, 
-label {
+p,
+label,
+ul {
   font-family: "Didact Gothic", sans-serif;
   font-size: 16px;
+}
+
+.list-header {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.list > .list-item-description {
+  font-size: 16px;
+  text-align: justify;
+}
+
+.admin-page >.container >h2 {
+  color: var(--bbq-white);
+  font-size: 25px;
 }
