@@ -58,7 +58,7 @@ export default function MenuPage({ state }) {
         </div>
         <h2>Welcome, admin!</h2>
         <AddForm onCreateItem={onCreateItem} />
-        {Items}
+        <div className="item-container">{Items}</div>
       </div>
     </div>
   );

@@ -27,9 +27,11 @@ button {
 
 p,
 label,
-ul {
+ul,
+.list > .list-item-description {
   font-family: "Didact Gothic", sans-serif;
   font-size: 16px;
+  text-align: justify;
 }
 
 .list-header {
@@ -37,12 +39,37 @@ ul {
   font-size: 20px;
 }
 
-.list > .list-item-description {
-  font-size: 16px;
-  text-align: justify;
-}
-
-.admin-page >.container >h2 {
+.admin-page > .container > h2 {
   color: var(--bbq-white);
   font-size: 25px;
+}
+
+@media (min-width: 768px) {
+  h1 {
+    font-size: 86px;
+  }
+
+  h2 {
+    font-size: 48px;
+  }
+
+  h3,
+  p,
+  label,
+  ul,
+  .list > .list-item-description {
+    font-size: 20px;
+  }
+
+  button {
+    font-size: 24px;
+  }
+
+  .list-header {
+    font-size: 28px;
+  }
+
+  .admin-page > .container > h2 {
+    font-size: 32px;
+  }
 }

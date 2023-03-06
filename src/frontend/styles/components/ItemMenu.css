@@ -28,3 +28,9 @@
 .list-item-img > img {
   width: 100%;
 }
+
+@media (min-width: 1200px) {
+  .item-menu > .container {
+    width: 400px;
+  }
+}

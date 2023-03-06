@@ -40,3 +40,19 @@ hr {
   border: 2px dashed white;
   width: 350px;
 }
+
+@media (min-width: 768px) {
+  button {
+    padding: var(--space-small) var(--space-big);
+  }
+
+  .add-button {
+    margin-top: var(--space-big);
+  }
+
+  hr {
+    border: 0px dashed transparent;
+    width: 0px;
+    margin: 0;
+  }
+}
