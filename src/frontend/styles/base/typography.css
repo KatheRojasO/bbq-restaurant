@@ -19,12 +19,6 @@ h3 {
   color: var(--bbq-white);
 }
 
-button {
-  font-family: "Bebas Neue", cursive;
-  color: var(--bbq-white);
-  font-size: 20px;
-}
-
 p,
 label,
 ul,
@@ -32,6 +26,12 @@ ul,
   font-family: "Didact Gothic", sans-serif;
   font-size: 16px;
   text-align: justify;
+}
+
+button {
+  font-family: "Bebas Neue", cursive;
+  color: var(--bbq-white);
+  font-size: 20px;
 }
 
 .list-header {
