@@ -1,0 +1,38 @@
+#footer {
+  background-color: var(--bbq-black);
+  width: 100%;
+}
+
+.social-media,
+.copy-right,
+.disclaimer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.social-media > img {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+  margin-top: 20px;
+}
+
+.copy-right > img {
+  width: 10px;
+  height: 10px;
+}
+
+.copy-right > p,
+.disclaimer > p{
+  font-size: 10px;
+  color: white;
+}
+
+.copy-right > p {
+  margin-left: 5px;
+}
+
+.disclaimer > p{
+  max-width: 350px;
+}
