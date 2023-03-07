@@ -2,13 +2,13 @@
 
 h1 {
   font-family: "Special Elite", cursive;
-  font-size: 36px;
+  font-size: 60px;
   margin: var(--space-small);
 }
 
 h2 {
   font-family: "Bebas Neue", cursive;
-  font-size: 20px;
+  font-size: 40px;
   margin: var(--space-small);
 }
 

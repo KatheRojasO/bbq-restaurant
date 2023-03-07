@@ -1,6 +1,7 @@
 nav {
   width: 100%;
   background-color: transparent;
+  position: absolute;
 }
 
 nav > .container {
