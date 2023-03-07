@@ -1,0 +1,22 @@
+{
+  "info": [
+    {
+      "id": 1,
+      "image": "images/about-1.jpg",
+      "title": "WE DON'T JUST SERVE BBQ. WE ARE BBQ.",
+      "description": "We love everything about BBQ. The food. The culture. The camaraderie. The way it brings people together to have a good time. And the good it does when it’s shared with the community. That’s why we take such pride in making our BBQ the best it can be.",
+      "href": "/menupage",
+      "text": "our menu",
+      "invert": false
+    },
+    {
+      "id": 2,
+      "image": "images/about-2.jpg",
+      "title": "SMOKIN’ SINCE 2023.",
+      "description": "We opened our ﬁrst local BBQ in Stockholm, Sweden in 2023. Every day since, we’ve been smokin’ and servin’ our signature BBQ to hungry folks and gaining news fans in the process. What’s been the secret to our success? We’re passionate about BBQ. We constantly perfect our craft. And we bring our expertise to the table with every meal.",
+      "href": "/contact",
+      "text": "contact us",
+      "invert": true
+    }
+  ]
+}
