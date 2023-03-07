@@ -13,16 +13,17 @@ nav > .container {
 nav > .container > img {
   width: 70px;
   height: 70px;
+  padding-left: 10px;
 }
 
-.navbar-buttons {
+.navbar-buttons  {
   display: flex;
   justify-content: space-around;
   align-items: center;
   width: 200px;
 }
 
-.navbar-buttons > button {
+.navbar-buttons > a > button {
   font-family: "Special Elite", cursive;
   font-size: 18px;
   background-color: transparent;
@@ -32,7 +33,7 @@ nav > .container > img {
   transition: 0.4s;
 }
 
-.navbar-buttons > button:hover {
+.navbar-buttons > a > button:hover {
     border-radius: 0;
     color: var(--bbq-white);
     border-bottom: 1px solid;
@@ -42,13 +43,14 @@ nav > .container > img {
   nav > .container > img {
     width: 90px;
     height: 90px;
+    padding-left: 20px;
   }
 
   .navbar-buttons {
     width: 300px;
   }
 
-  .navbar-buttons > button {
+  .navbar-buttons > a > button {
     font-size: 24px;
   }
 }

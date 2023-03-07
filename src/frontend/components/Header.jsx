@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import img from "../assets/images/logo.png";
 
 export default function Header() {
@@ -7,8 +8,12 @@ export default function Header() {
       <div className="container">
         <img src={img} alt="logo-hot-grill" />
         <div className="navbar-buttons">
-          <button>Our Menu</button>
-          <button>Contact us</button>
+          <Link to="/menu">
+            <button>Our Menu</button>
+          </Link>
+          <Link to="/contact">
+            <button>Contact us</button>
+          </Link>
         </div>
       </div>
     </nav>
