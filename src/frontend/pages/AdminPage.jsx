@@ -8,7 +8,7 @@ import img from "../assets/images/logo.png";
 import AddForm from "../components/AddForm";
 import ItemMenu from "../components/ItemMenu";
 
-export default function MenuPage({ state }) {
+export default function AdminPage({ state }) {
   const [menuItems, setMenuItems] = state;
 
   const Items = menuItems.map((item) => (

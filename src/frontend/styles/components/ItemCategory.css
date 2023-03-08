@@ -1,0 +1,20 @@
+.item-category > .container {
+  background-color: #fafafa;
+  padding: 0;
+  max-width: 350px;
+  margin: 20px 0;
+  box-shadow: 5px 10px 18px var(--bbq-black);
+  cursor: pointer;
+}
+
+.item-category > .container:hover {
+  box-shadow: 10px 10px 18px var(--bbq-black);
+}
+
+.item-img > img {
+  width: 350px;
+}
+
+.item-category > .container > .list > .list-item-description {
+  padding-bottom: 20px;
+}

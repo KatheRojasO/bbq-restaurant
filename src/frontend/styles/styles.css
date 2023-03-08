@@ -11,4 +11,6 @@
 @import "./components/Header.css";
 @import "./components/Hero.css";
 @import "./pages/HomePage.css";
+@import "./pages/MenuPage.css";
+@import "./components/ItemCategory.css";
 @import "./components/Footer.css";
