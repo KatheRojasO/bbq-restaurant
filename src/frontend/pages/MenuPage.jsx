@@ -18,8 +18,9 @@ export default function MenuPage({ state }) {
         <Hero />
         <div className="menu-categories">
           <h1>Our Menu</h1>
-          <div className="item-container">{Items}</div>
+          {Items}
         </div>
+        
       </div>
     </div>
   );

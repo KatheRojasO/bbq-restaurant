@@ -6,7 +6,7 @@ import data from "../json/mainpage.json";
 export default function HomePage() {
   const items = data.info.map((item) => (
     <li
-      className={item.invert ? "menu-option-right" : "menu-option-left"}
+      className={item.invert ? "option-right" : "option-left"}
       key={item.id}
     >
       <img className="description-img" src={item.image} alt="options" />
