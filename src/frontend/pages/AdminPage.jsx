@@ -52,10 +52,7 @@ export default function AdminPage({ state }) {
   return (
     <div className="admin-page">
       <div className="container">
-        <div className="dashboard-header">
-          <img src={img} alt="logo"></img>
           <h1>Hot Grill Dashboard</h1>
-        </div>
         <h2>Welcome, admin!</h2>
         <AddForm onCreateItem={onCreateItem} />
         <div className="item-container">{Items}</div>
