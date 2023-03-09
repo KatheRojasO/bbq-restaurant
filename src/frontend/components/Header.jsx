@@ -6,7 +6,9 @@ export default function Header() {
   return (
     <nav>
       <div className="container">
-        <img src={img} alt="logo-hot-grill" />
+        <Link to="/">
+          <img src={img} alt="logo-hot-grill" />
+        </Link>
         <div className="navbar-buttons">
           <Link to="/menu">
             <button>Our Menu</button>
