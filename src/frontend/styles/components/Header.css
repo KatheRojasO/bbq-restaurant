@@ -11,7 +11,7 @@ nav > .container {
   background-color: transparent;
 }
 
-nav > .container > img {
+nav > .container > a > img {
   width: 70px;
   height: 70px;
   padding-left: 10px;
@@ -41,7 +41,7 @@ nav > .container > img {
 }
 
 @media (min-width: 768px) {
-  nav > .container > img {
+  nav > .container > a > img {
     width: 90px;
     height: 90px;
     padding-left: 20px;
@@ -52,6 +52,6 @@ nav > .container > img {
   }
 
   .navbar-buttons > a > button {
-    font-size: 24px;
+    font-size: 20px;
   }
 }
