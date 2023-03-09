@@ -1,21 +1,10 @@
-.form-info {
+.contact-form {
   display: flex;
   flex-direction: column;
-  align-items: left;
+  align-items: center;
   margin-bottom: 20px;
 }
 
-input[type="text"],
-[type="date"],
-[type="time"] {
-  width: 200px;
-  padding: 5px 0;
-  margin: 8px 10px;
-  background-color:transparent;
-  border-width: 0 0 2px;
-  border-color: var(--bbq-white);
-  color: var(--bbq-white);
-  font-family: "Didact Gothic", sans-serif;
-  font-weight: bold;
+.book-button{
+  margin-top: 30px;
 }
-
