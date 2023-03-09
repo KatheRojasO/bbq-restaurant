@@ -1,8 +1,12 @@
-.category-products > .container {
+.category-products > a > .container {
     padding: 0;
     max-width: 350px;
     margin: 20px 20px;
     color: var(--bbq-white);
+  }
+
+  a {
+    text-decoration: none;
   }
   
   .list-header,

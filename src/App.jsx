@@ -9,6 +9,7 @@ import HomePage from "./frontend/pages/HomePage";
 import MenuPage from "./frontend/pages/MenuPage";
 import ContactPage from "./frontend/pages/ContactPage";
 import CategoryPage from "./frontend/pages/CategoryPage";
+import ProductPage from "./frontend/pages/ProductPage";
 
 export default function App() {
   const [menuItems, setMenuItems] = useState([]);
@@ -37,7 +38,7 @@ export default function App() {
     setStatus(2);
   }
 
-  const category = categoryItems.map((itemName) => (
+  const categoryRoute = categoryItems.map((itemName) => (
     <Route
       path={`/${itemName.name}`}
       element={
@@ -46,6 +47,15 @@ export default function App() {
           categoryName={itemName.name}
           menuItems={menuItems}
         />
+      }
+    />
+  ));
+
+  const productRoute = categoryItems.map((itemName) => (
+    <Route
+      path={`/${itemName.name}/:id`}
+      element={
+        <ProductPage menuItems={menuItems} />
       }
     />
   ));
@@ -61,7 +71,8 @@ export default function App() {
             path="/menu"
             element={<MenuPage state={[categoryItems, setCategoryItems]} />}
           />
-          {category}
+          {categoryRoute}
+          {productRoute}
           <Route path="/contact" element={<ContactPage />} />
           <Route
             path="/dashboard"

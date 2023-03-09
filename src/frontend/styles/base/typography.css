@@ -53,20 +53,12 @@ button {
     font-size: 48px;
   }
 
-  h3,
-  p,
-  label,
-  ul,
-  .list > .list-item-description {
+  button {
     font-size: 20px;
   }
 
-  button {
-    font-size: 24px;
-  }
-
   .list-header {
-    font-size: 28px;
+    font-size: 22px;
   }
 
   .admin-page > .container > h2 {

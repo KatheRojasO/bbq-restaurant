@@ -7,7 +7,7 @@ export default function CategoryPage({ categoryImg, categoryName, menuItems }) {
       (product) => product.category.toLowerCase() === categoryName.toLowerCase()
     )
     .map((filteredProducts) => (
-      <CategoryProducts products={filteredProducts} />
+      <CategoryProducts categoryName={categoryName} products={filteredProducts} />
     ));
 
   return (
