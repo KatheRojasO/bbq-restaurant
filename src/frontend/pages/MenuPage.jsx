@@ -20,7 +20,6 @@ export default function MenuPage({ state }) {
           <h1>Our Menu</h1>
           {Items}
         </div>
-        
       </div>
     </div>
   );

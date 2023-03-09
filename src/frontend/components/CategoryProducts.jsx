@@ -15,11 +15,8 @@ export default function CategoryProducts({ products }) {
             <li className="list-item-price">{price}:-</li>
           </div>
           <li className="list-item-description">{description}</li>
-          <li className="list-item-servedWith">
-            <b>Served with: </b>
-            {servedWith}
-          </li>
         </ul>
+        <hr/>
       </div>
     </article>
   );

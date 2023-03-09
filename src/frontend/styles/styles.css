@@ -12,8 +12,10 @@
 @import "./components/Hero.css";
 @import "./pages/HomePage.css";
 @import "./pages/MenuPage.css";
+@import "./pages/CategoryPage.css";
 @import "./pages/ContactPage.css";
 @import "./components/ItemCategory.css";
+@import "./components/CategoryProducts.css";
 @import "./components/Footer.css";
 @import "./components/ContactForm.css";
 @import "./components/Map.css";

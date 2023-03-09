@@ -1,0 +1,39 @@
+.category-page > .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.category-page > .container > .category-hero > img {
+  width: 400px;
+  opacity: 0.8;
+  
+}
+
+.category-page > .container > .category-hero {
+  position: relative;
+  padding-top: 85px;
+}
+
+.category-page > .container > .category-hero > h1 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-55%);
+  color: var(--bbq-white);
+}
+
+@media (min-width: 768px) {
+  .category-page > .container > .category-hero > img {
+    width: 700px;
+  }
+
+  .category-page > .container > .category-hero {
+    padding-top: 100px;
+  }
+
+  .category-page > .container > .product-container {
+    display: flex;
+    justify-content: space-between;
+  }
+}

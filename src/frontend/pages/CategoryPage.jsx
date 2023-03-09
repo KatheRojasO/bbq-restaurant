@@ -1,19 +1,23 @@
 import React from "react";
 import CategoryProducts from "../components/CategoryProducts";
-import Hero from "../components/Hero";
 
 export default function CategoryPage({ categoryImg, categoryName, menuItems }) {
   const products = menuItems
     .filter(
       (product) => product.category.toLowerCase() === categoryName.toLowerCase()
     )
-    .map(filteredProducts => <CategoryProducts products={filteredProducts}/>);
+    .map((filteredProducts) => (
+      <CategoryProducts products={filteredProducts} />
+    ));
 
   return (
     <div className="category-page">
       <div className="container">
-        <h1>CategoryPage</h1>
-        {products}
+        <div className="category-hero">
+          <img src={categoryImg} alt="category-img"></img>
+          <h1>{categoryName}</h1>
+        </div>
+        <div className="product-container">{products}</div>
       </div>
     </div>
   );
