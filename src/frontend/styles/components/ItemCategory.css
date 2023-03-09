@@ -1,4 +1,4 @@
-.item-category > .container {
+.item-category > a > .container {
   background-color: #fafafa;
   padding: 0;
   max-width: 300px;
@@ -7,12 +7,17 @@
   cursor: pointer;
 }
 
-.item-category > .container:hover {
+.item-category > a {
+  color: var(--bbq-black);
+  text-decoration: none;
+} 
+
+.item-category > a > .container:hover {
   box-shadow: 10px 10px 18px var(--bbq-black);
 }
 
-.menu-option-left,
-.menu-option-right {
+.container > .menu-option-left,
+.container > .menu-option-right {
   list-style-type: none;
   display: flex;
   flex-direction: column;
@@ -21,8 +26,8 @@
   padding: 0 var(--space-big);
 }
 
-.menu-option-left > .category-description > h1,
-.menu-option-right > .category-description > h1 {
+.container > .menu-option-left > .category-description > h1,
+.container > .menu-option-right > .category-description > h1 {
   font-size: 26px;
   text-align: center;
   margin-top: 30px;
@@ -33,12 +38,12 @@
   margin-bottom: 30px;
 }
 
-.item-category > .container > li > img {
+.item-category > a > .container > li > img {
   width: 300px;
 }
 
-.menu-option-left > .category-description,
-.menu-option-right > .category-description {
+.container > .menu-option-left > .category-description,
+.container > .menu-option-right > .category-description {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -46,12 +51,12 @@
 }
 
 @media (min-width: 768px) {
-  .item-category > .container {
+  .item-category > a > .container {
     max-width: 650px;
   }
 
-  .menu-option-left,
-  .menu-option-right {
+  .container > .menu-option-left,
+  .container > .menu-option-right {
     padding: 0;
     flex-direction: row;
     justify-content: center;
@@ -59,21 +64,20 @@
     align-content: center;
   }
 
-  .menu-option-right {
+  .container > .menu-option-right {
     flex-direction: row-reverse;
   }
 
-  .menu-option-left > .category-description > h1,
-  .menu-option-right > .category-description > h1,
-  .menu-option-left > .category-description > p,
-  .menu-option-right > .category-description > p {
+  .container > .menu-option-left > .category-description > h1,
+  .container > .menu-option-right > .category-description > h1,
+  .container > .menu-option-left > .category-description > p,
+  .container > .menu-option-right > .category-description > p {
     margin: 0;
     padding: 0 20px;
   }
 
-  .menu-option-left > .category-description > p,
-  .menu-option-right > .category-description > p {
+  .container > .menu-option-left > .category-description > p,
+  .container > .menu-option-right > .category-description > p {
     font-size: 18px;
   }
- 
 }

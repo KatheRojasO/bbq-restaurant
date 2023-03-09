@@ -8,6 +8,7 @@ import Footer from "./frontend/components/Footer";
 import HomePage from "./frontend/pages/HomePage";
 import MenuPage from "./frontend/pages/MenuPage";
 import ContactPage from "./frontend/pages/ContactPage";
+import CategoryPage from "./frontend/pages/CategoryPage";
 
 export default function App() {
   const [menuItems, setMenuItems] = useState([]);
@@ -22,11 +23,11 @@ export default function App() {
     }
     async function loadCategoryData(collectionName) {
       const categoryData = await readDocuments(collectionName).catch(onFail);
-      setCategoryItems(categoryData)
+      setCategoryItems(categoryData);
       onSuccess(categoryData);
     }
     loadItemsData("menuItems");
-    loadCategoryData("categories")
+    loadCategoryData("categories");
   }, []);
 
   function onSuccess() {
@@ -35,7 +36,20 @@ export default function App() {
   function onFail() {
     setStatus(2);
   }
-  
+
+  const category = categoryItems.map((itemName) => (
+    <Route
+      path={`/${itemName.name}`}
+      element={
+        <CategoryPage
+          categoryImg={itemName.image}
+          categoryName={itemName.name}
+          menuItems={menuItems}
+        />
+      }
+    />
+  ));
+
   return (
     <div className="App">
       <BrowserRouter>
@@ -43,9 +57,18 @@ export default function App() {
         <Header />
         <Routes>
           <Route path="/" element={<HomePage />} />
-          <Route path="/menu" element={<MenuPage state={[categoryItems, setCategoryItems]}/>} />
+          <Route
+            path="/menu"
+            element={<MenuPage state={[categoryItems, setCategoryItems]} />}
+          />
+          {category}
           <Route path="/contact" element={<ContactPage />} />
-          <Route path="/dashboard" element={status === 1 && <AdminPage state={[menuItems, setMenuItems]}/>}/>
+          <Route
+            path="/dashboard"
+            element={
+              status === 1 && <AdminPage state={[menuItems, setMenuItems]} />
+            }
+          />
         </Routes>
         {status === 2 && <p>Error...❌</p>}
       </BrowserRouter>
