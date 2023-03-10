@@ -18,7 +18,7 @@ export default function ContactPage() {
           <h1>Address</h1>
           <p>Klara Norra kyrkogata 26, 111 22</p>
           <p>Stockholm, Sweden</p>
-          <Map />
+          <Map latitude={59.333871} longitude={18.0584947}/>
         </div>
       </div>
     </div>

@@ -8,3 +8,7 @@
 .book-button{
   margin-top: 30px;
 }
+
+.contact-form > .form-inputs > .add-form-label > input {
+  width: 300px;
+}

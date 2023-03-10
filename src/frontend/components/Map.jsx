@@ -7,8 +7,6 @@ export default function Map({ latitude, longitude }) {
     lng: (longitude),
   };
 
-  console.log(center)
-
   return (
     <LoadScript googleMapsApiKey={process.env.REACT_APP_GOOGLE_MAPS_API_KEY}>
       <GoogleMap
