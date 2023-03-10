@@ -4,3 +4,12 @@
     margin-top: 20px;   
 }
 
+.update-form > .message {
+    color: green;
+    font-weight: bold;
+}
+
+.update-form > .form-title >h3 {
+    margin-left: 0;
+}
+

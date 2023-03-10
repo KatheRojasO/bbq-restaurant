@@ -9,10 +9,8 @@ import ItemMenu from "../components/ItemMenu";
 
 export default function AdminPage({ categoryItems, state }) {
   const [menuItems, setMenuItems] = state;
-  
-  const options = categoryItems.map((option) => (
-    <option>{option.name}</option>
-  ));
+
+  const options = categoryItems.map((option) => <option>{option.name}</option>);
 
   const Items = menuItems.map((item) => (
     <>
@@ -55,7 +53,7 @@ export default function AdminPage({ categoryItems, state }) {
   return (
     <div className="admin-page">
       <div className="container">
-          <h1>Hot Grill Dashboard</h1>
+        <h1>Hot Grill Dashboard</h1>
         <h2>Welcome, admin!</h2>
         <AddForm options={options} onCreateItem={onCreateItem} />
         <div className="item-container">{Items}</div>
