@@ -5,7 +5,12 @@
   margin-bottom: 20px;
 }
 
-.book-button{
+.contact-form > .message {
+  color: var(--bbq-white);
+  font-weight: bold;
+}
+
+.book-button {
   margin-top: 30px;
 }
 

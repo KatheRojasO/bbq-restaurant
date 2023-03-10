@@ -6,6 +6,7 @@ export default function Form() {
   const [email, setEmail] = useState("");
   const [date, setDate] = useState("");
   const [time, setTime] = useState("");
+  const [formSubmit, setFormSubmit] = useState(false);
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -33,10 +34,14 @@ export default function Form() {
         }
       );
       event.target.reset();
+      setFormSubmit(true)
   };
 
   return (
     <form className="contact-form" onSubmit={(event) => handleSubmit(event)}>
+      <div className="message">
+        <p>{formSubmit && "We received your booking. See you soon!"}</p>
+      </div>
       <div className="form-inputs">
         <label className="add-form-label">
           Full name:
