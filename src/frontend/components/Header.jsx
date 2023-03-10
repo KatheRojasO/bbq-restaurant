@@ -1,5 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faUserCircle } from "@fortawesome/free-solid-svg-icons";
 import img from "../assets/images/logo.png";
 
 export default function Header() {
@@ -15,6 +17,9 @@ export default function Header() {
           </Link>
           <Link to="/contact">
             <button>Contact us</button>
+          </Link>
+          <Link to="/dashboard">
+            <FontAwesomeIcon icon={faUserCircle} color="white" size="2x" />
           </Link>
         </div>
       </div>
