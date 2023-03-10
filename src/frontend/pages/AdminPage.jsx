@@ -7,8 +7,12 @@ import {
 import AddForm from "../components/AddForm";
 import ItemMenu from "../components/ItemMenu";
 
-export default function AdminPage({ state }) {
+export default function AdminPage({ categoryItems, state }) {
   const [menuItems, setMenuItems] = state;
+  
+  const options = categoryItems.map((option) => (
+    <option>{option.name}</option>
+  ));
 
   const Items = menuItems.map((item) => (
     <>
@@ -53,7 +57,7 @@ export default function AdminPage({ state }) {
       <div className="container">
           <h1>Hot Grill Dashboard</h1>
         <h2>Welcome, admin!</h2>
-        <AddForm onCreateItem={onCreateItem} />
+        <AddForm options={options} onCreateItem={onCreateItem} />
         <div className="item-container">{Items}</div>
       </div>
     </div>

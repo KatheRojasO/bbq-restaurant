@@ -77,7 +77,7 @@ export default function App() {
           <Route
             path="/dashboard"
             element={
-              status === 1 && <AdminPage state={[menuItems, setMenuItems]} />
+              status === 1 && <AdminPage categoryItems={categoryItems} state={[menuItems, setMenuItems]} />
             }
           />
         </Routes>

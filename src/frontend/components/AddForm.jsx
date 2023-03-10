@@ -1,12 +1,13 @@
 import React, { useState } from "react";
 
-export default function AddForm({ onCreateItem }) {
+export default function AddForm({ options, onCreateItem }) {
   const [name, setName] = useState("");
   const [description, setDescription] = useState("");
   const [servedWith, setServedWith] = useState("");
   const [price, setPrice] = useState("");
   const [imageURL, setImageURL] = useState("");
   const [category, setCategory] = useState("");
+  const [formSubmit, setFormSubmit] = useState(false);
 
   function onSubmit(event) {
     event.preventDefault();
@@ -20,12 +21,16 @@ export default function AddForm({ onCreateItem }) {
       category: category,
     };
     onCreateItem(itemObject);
+    setFormSubmit(true)
   }
 
   return (
     <form className="add-form" onSubmit={(event) => onSubmit(event)}>
       <div className="form-title">
         <h3>Add a new plate to Hot Grill page:</h3>
+      </div>
+      <div className="message">
+        <p>{formSubmit && "The product was created succesfully "}</p>
       </div>
       <div className="form-inputs">
         <label className="add-form-label">
@@ -69,13 +74,12 @@ export default function AddForm({ onCreateItem }) {
             onChange={(event) => setImageURL(event.target.value)}
           />
         </label>
-        <label className="add-form-label">
+        <label for="category-select" className="add-form-label">
           Category:
-          <input
-            type="text"
-            value={category}
-            onChange={(event) => setCategory(event.target.value)}
-          />
+          <select name="categories" id="category-select" onChange={(event) => setCategory(event.target.value)}>
+            <option value="">--Please choose a category-</option>
+            {options}
+          </select>
         </label>
       </div>
       <div className="form-button">
@@ -84,3 +88,9 @@ export default function AddForm({ onCreateItem }) {
     </form>
   );
 }
+
+{/* <input
+  type="text"
+  value={category}
+  onChange={(event) => setCategory(event.target.value)}
+/>; */}
