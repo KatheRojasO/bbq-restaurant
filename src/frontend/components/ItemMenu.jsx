@@ -29,9 +29,7 @@ export default function ItemMenu({ item, onUpdateItem, onDeleteItem }) {
               onClose={() => setIsOpen(false)}
               item={item}
               onUpdateItem={onUpdateItem}
-            >
-              Fancy Modal
-            </Modal>
+            />
             <button onClick={() => onDeleteItem(id)}>Delete</button>
           </div>
         </ul>

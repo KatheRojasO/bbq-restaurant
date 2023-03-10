@@ -4,7 +4,6 @@ import {
   deleteDocument,
   updateDocument,
 } from "../../backend/scripts/firestore";
-import img from "../assets/images/logo.png";
 import AddForm from "../components/AddForm";
 import ItemMenu from "../components/ItemMenu";
 

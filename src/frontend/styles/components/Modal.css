@@ -3,19 +3,37 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background-color: #FFF;
+  background-color: var(--bbq-black);
   padding: 50px;
   z-index: 1000;
-  
- 
 }
 
 .overlay-style {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(0, 0, 0, 0.75);
-    z-index: 1000;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.75);
+  z-index: 1000;
+}
+
+.modal-style > button {
+  border-radius: 100%;
+  border-style: solid;
+  border-color: var(--bbq-white);
+  border-width: 1px;
+  background-color: transparent;
+  font-size: 12px;
+  position: absolute;
+  top: 12px;
+  right: 10px;
+  padding: 3px 8px;
+}
+
+@media (min-width: 768px) {
+  .modal-style {
+    width: 300px;
+  }
+  
 }
