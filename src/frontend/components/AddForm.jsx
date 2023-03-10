@@ -22,6 +22,13 @@ export default function AddForm({ options, onCreateItem }) {
     };
     onCreateItem(itemObject);
     setFormSubmit(true)
+    setName("")
+    setDescription("");
+    setServedWith("");
+    setPrice("");
+    setImageURL("");
+    setCategory("");
+    event.target.reset();
   }
 
   return (
@@ -89,8 +96,3 @@ export default function AddForm({ options, onCreateItem }) {
   );
 }
 
-{/* <input
-  type="text"
-  value={category}
-  onChange={(event) => setCategory(event.target.value)}
-/>; */}
