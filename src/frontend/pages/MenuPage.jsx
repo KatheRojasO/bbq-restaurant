@@ -5,6 +5,7 @@ import ItemCategory from "../components/ItemCategory";
 export default function MenuPage({ state }) {
   const [categoryItems, setCategoryItems] = state;
 
+  // same as AdminPage you are adding 3 lines of code for not using CSS properly
   const Items = categoryItems.map((item) => (
     <>
       <ItemCategory key={item.id} item={item} />

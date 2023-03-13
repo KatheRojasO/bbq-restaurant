@@ -11,11 +11,14 @@ import ContactPage from "./frontend/pages/ContactPage";
 import CategoryPage from "./frontend/pages/CategoryPage";
 import ProductPage from "./frontend/pages/ProductPage";
 
+// naming: This is not a -1 points or something but is easier to rename the folders backend and frontend to admin and customer
+// folder inside folder, the backend foldr only exist to hold the folder firebase. A js folder inside src was more than enought 
 export default function App() {
   const [menuItems, setMenuItems] = useState([]);
-  const [categoryItems, setCategoryItems] = useState([]);
+  const [categoryItems, setCategoryItems] = useState([]); // notice that this will show all the products of all categories, it will get messy really fast
   const [status, setStatus] = useState(0);
 
+  // doing a double loading is a sign that this can be refactor/broken down into 2 loading pages
   useEffect(() => {
     async function loadItemsData(collectionName) {
       const data = await readDocuments(collectionName).catch(onFail);
@@ -54,12 +57,12 @@ export default function App() {
   const productRoute = categoryItems.map((itemName) => (
     <Route
       path={`/${itemName.name}/:id`}
-      element={
-        <ProductPage menuItems={menuItems} />
-      }
+      element={<ProductPage menuItems={menuItems} />}
     />
   ));
 
+  // nesting -1, what happened here?
+  // just by the look, you should have stopped and refactored
   return (
     <div className="App">
       <BrowserRouter>
@@ -77,7 +80,12 @@ export default function App() {
           <Route
             path="/dashboard"
             element={
-              status === 1 && <AdminPage categoryItems={categoryItems} state={[menuItems, setMenuItems]} />
+              status === 1 && (
+                <AdminPage
+                  categoryItems={categoryItems}
+                  state={[menuItems, setMenuItems]}
+                />
+              )
             }
           />
         </Routes>

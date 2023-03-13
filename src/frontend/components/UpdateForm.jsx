@@ -23,8 +23,8 @@ export default function UpdateForm({ onClick, onUpdateItem, item, options }) {
       category: category,
     };
     onUpdateItem(itemObject);
-    setFormSubmit(true)
-    setName("")
+    setFormSubmit(true);
+    setName("");
     setDescription("");
     setServedWith("");
     setPrice("");

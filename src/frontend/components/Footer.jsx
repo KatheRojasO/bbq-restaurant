@@ -3,6 +3,7 @@ import instagramIcon from "../assets/icons/instagram-icon.png";
 import fbIcon from "../assets/icons/fb-icon.png";
 import copyIcon from "../assets/icons/copyright_icon.png";
 
+// good
 export default function Footer() {
   return (
     <footer id="footer">

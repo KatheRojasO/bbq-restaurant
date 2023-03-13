@@ -3,11 +3,12 @@ import { Link } from "react-router-dom";
 
 export default function ItemCategory({ item }) {
   const { id, name, image, alt, description, invert } = item;
-  
+
   return (
     <article className="item-category">
       <Link to={`/${name}`}>
         <div className="container">
+          {/* this classname can be a property to make it one line */}
           <li
             className={invert ? "menu-option-right" : "menu-option-left"}
             key={id}

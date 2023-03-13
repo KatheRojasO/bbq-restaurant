@@ -3,12 +3,10 @@ import { Link } from "react-router-dom";
 import Hero from "../components/Hero";
 import data from "../json/mainpage.json";
 
+// good
 export default function HomePage() {
   const items = data.info.map((item) => (
-    <li
-      className={item.invert ? "option-right" : "option-left"}
-      key={item.id}
-    >
+    <li className={item.invert ? "option-right" : "option-left"} key={item.id}>
       <img className="description-img" src={item.image} alt="options" />
       <div className="description">
         <h1>{item.title}</h1>

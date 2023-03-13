@@ -4,6 +4,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUserCircle } from "@fortawesome/free-solid-svg-icons";
 import img from "../assets/images/logo.png";
 
+// good
 export default function Header() {
   return (
     <nav>

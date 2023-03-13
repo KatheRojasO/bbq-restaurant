@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 
+// this component is too long, i will explain how to improve this
 export default function AddForm({ options, onCreateItem }) {
   const [name, setName] = useState("");
   const [description, setDescription] = useState("");
@@ -21,8 +22,8 @@ export default function AddForm({ options, onCreateItem }) {
       category: category,
     };
     onCreateItem(itemObject);
-    setFormSubmit(true)
-    setName("")
+    setFormSubmit(true);
+    setName("");
     setDescription("");
     setServedWith("");
     setPrice("");
@@ -83,7 +84,11 @@ export default function AddForm({ options, onCreateItem }) {
         </label>
         <label for="category-select" className="add-form-label">
           Category:
-          <select name="categories" id="category-select" onChange={(event) => setCategory(event.target.value)}>
+          <select
+            name="categories"
+            id="category-select"
+            onChange={(event) => setCategory(event.target.value)}
+          >
             <option value="">--Please choose a category-</option>
             {options}
           </select>
@@ -95,4 +100,3 @@ export default function AddForm({ options, onCreateItem }) {
     </form>
   );
 }
-

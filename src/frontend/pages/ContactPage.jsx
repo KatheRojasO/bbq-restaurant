@@ -7,6 +7,7 @@ export default function ContactPage() {
     <div className="contact-page">
       <div className="container">
         <div className="info-table">
+          {/* Two H1 -1 */}
           <h1>Opening times</h1>
           <p>Tuesday to Sunday 11.00 - 21.00</p>
           <hr />
@@ -18,7 +19,7 @@ export default function ContactPage() {
           <h1>Address</h1>
           <p>Klara Norra kyrkogata 26, 111 22</p>
           <p>Stockholm, Sweden</p>
-          <Map latitude={59.333871} longitude={18.0584947}/>
+          <Map latitude={59.333871} longitude={18.0584947} />
         </div>
       </div>
     </div>

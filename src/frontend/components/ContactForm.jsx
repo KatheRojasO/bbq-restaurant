@@ -8,6 +8,8 @@ export default function Form() {
   const [time, setTime] = useState("");
   const [formSubmit, setFormSubmit] = useState(false);
 
+  // this code is terrible, sorry for souding harsh but is too long and too nested and it was not even neccesary.
+  // this is a case of missguided antetion, instead of adding more features, we should expend some time refactoring existing ones
   const handleSubmit = (event) => {
     event.preventDefault();
 
@@ -15,7 +17,7 @@ export default function Form() {
       name: name,
       email: email,
       date: date,
-      time: time
+      time: time,
     };
 
     emailjs
@@ -33,8 +35,8 @@ export default function Form() {
           console.log(error.text);
         }
       );
-      event.target.reset();
-      setFormSubmit(true)
+    event.target.reset();
+    setFormSubmit(true);
   };
 
   return (
@@ -45,19 +47,34 @@ export default function Form() {
       <div className="form-inputs">
         <label className="add-form-label">
           Full name:
-          <input type="text" onChange={(event) => setName(event.target.value)} />
+          <input
+            type="text"
+            onChange={(event) => setName(event.target.value)}
+          />
         </label>
         <label className="add-form-label">
           Email:
-          <input type="email"  onChange={(event) => setEmail(event.target.value)}  />
+          <input
+            type="email"
+            onChange={(event) => setEmail(event.target.value)}
+          />
         </label>
         <label className="add-form-label">
           Date:
-          <input type="date" min="2023-01" onChange={(event) => setDate(event.target.value)} />
+          <input
+            type="date"
+            min="2023-01"
+            onChange={(event) => setDate(event.target.value)}
+          />
         </label>
         <label className="add-form-label">
           Time:
-          <input type="time" min="11:00" max="21:00" onChange={(event) => setTime(event.target.value)}  />
+          <input
+            type="time"
+            min="11:00"
+            max="21:00"
+            onChange={(event) => setTime(event.target.value)}
+          />
         </label>
       </div>
       <div className="form-button">

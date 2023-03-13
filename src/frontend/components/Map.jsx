@@ -3,8 +3,8 @@ import { GoogleMap, Marker, LoadScript } from "@react-google-maps/api";
 
 export default function Map({ latitude, longitude }) {
   const center = {
-    lat: (latitude),
-    lng: (longitude),
+    lat: latitude,
+    lng: longitude,
   };
 
   return (
@@ -14,7 +14,7 @@ export default function Map({ latitude, longitude }) {
         center={center}
         mapContainerClassName="map-container"
       >
-        <Marker position={center}/>
+        <Marker position={center} />
       </GoogleMap>
     </LoadScript>
   );

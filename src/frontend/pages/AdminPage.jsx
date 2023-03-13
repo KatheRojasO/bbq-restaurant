@@ -20,6 +20,7 @@ export default function AdminPage({ categoryItems, state }) {
         onUpdateItem={onUpdateItem}
         onDeleteItem={onDeleteItem}
       />
+      {/* use CSS instead of HR -1 */}
       <hr />
     </>
   ));

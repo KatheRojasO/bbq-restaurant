@@ -13,6 +13,7 @@ export default function ProductPage({ menuItems }) {
       <div className="container">
         <img src={productInfo.image} alt="product-img" />
         <div className="product-price">
+          {/* double H1 */}
           <h1>{productInfo.name}</h1>
           <h1>{productInfo.price}:-</h1>
         </div>
